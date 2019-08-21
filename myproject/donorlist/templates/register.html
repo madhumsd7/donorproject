@@ -1,0 +1,55 @@
+{% load static %}
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="{% static 'style1.css' %}">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://fonts.googleapis.com/css?family=Indie+Flower&display=swap" rel="stylesheet">
+</head>
+<body>
+<div id="d1">
+  <img src="{% static "images/1.png" %}" id="img1" />
+  <p id="p1">BLOOD DONOR LIST</p>
+  <p id="p2">-DONATE BLOOD...!!!SAVE LIFE...!!!</p>
+</div>
+<div class="topnav">
+<a href="/">HOME</a>
+<a href="/register/">REGISTER</a>
+<a href="/view/">VIEW DONOR</a>
+<a href="/about/">ABOUT</a>
+<a href="/contact/">CONTACT</a>
+</div>
+<div id="d3">
+<marquee id="m1">WELCOME TO REGISTRATION PAGE...</marquee>
+</div>
+<div id="reg">
+<form action = "/register/" method="post" id="form1">
+ {% csrf_token %}
+<div id="d4">
+  <label>FIRSTNAME :</label><br>
+  <input type="text" name="name" placeholder="name" required autocomplete="off"><br><br>
+  <label>BLOOD GROUP :</label>
+  <select name="blood">
+  <option value="A+">A+</option>
+  <option value="A-">A-</option>
+  <option value="B+">B+</option>
+  <option value="B-">B-</option>
+  </select><br><br>
+  <label>EMAIL :</label>
+  <input type="email" name="email" placeholder="email"required autocomplete="off"><br><br>
+   <label>CONTACT NUMBER:</label>
+  <input type="text" name="mobile_number" placeholder="MOB_number"required autocomplete="off"><br><br>
+  <label>PLACE :</label>
+  <input type="text" name="place" placeholder="place"required autocomplete="off"><br><br>
+  <input type="Submit">
+  </div>
+  </form>
+  </div>
+  <div>
+  {%  for messege in messages %}
+  <h4>{{ messege }}</h4>
+  {% endfor%}
+   </div>
+
+</body>
+</html>
+

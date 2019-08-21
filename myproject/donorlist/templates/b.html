@@ -1,0 +1,42 @@
+{% load static %}
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://fonts.googleapis.com/css?family=Indie+Flower&display=swap" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="{% static 'style2.css' %}">
+</head>
+<body>
+<div id="d1">
+  <img src="{% static "images/1.png" %}" id="img1" />
+  <p id="p1">BLOOD DONOR LIST</p>
+  <p id="p2">-DONATE BLOOD...!!!SAVE LIFE...!!!</p>
+</div>
+<div class="topnav">
+<a href="/">HOME</a>
+<a href="/register/">REGISTER</a>
+<a href="/view/">VIEW DONOR</a>
+<a href="/about/">ABOUT</a>
+<a href="/contact/">CONTACT</a>
+</div>
+<div id="div4">
+    <table>
+     <tr>
+      <th>NAME</th>
+      <th>BLOOD GRP</th>
+      <th>MOBILE NO</th>
+      <th>PLACE</th>
+     </tr>
+     {%for l in b %}
+      <tr>
+      <td>{{l.name}}</td>
+      <td>{{l.blood}}</td>
+      <td>{{l.mobile_number}}</td>
+      <td>{{l.place}}</td>
+     </tr>
+     {% endfor %} 
+    </table>
+</div>
+<a href="/view/">BACK TO DASHBOARD</a>
+
+</body>
+</html>

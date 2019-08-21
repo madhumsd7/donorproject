@@ -1,0 +1,39 @@
+{% load static %}
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="{% static 'style1.css' %}">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://fonts.googleapis.com/css?family=Indie+Flower&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Rokkitt&display=swap" rel="stylesheet">
+</head>
+<body>
+<div id="d1">
+  <img src="{% static "images/1.png" %}" id="img1" />
+  <p id="p1">BLOOD DONOR LIST</p>
+  <p id="p2">-DONATE BLOOD...!!!SAVE LIFE...!!!</p>
+</div>
+<div class="topnav">
+<a href="/">HOME</a>
+<a href="/register/">REGISTER</a>
+<a href="/view/">VIEW DONOR</a>
+<a href="/about/">ABOUT</a>
+<a href="/contact/">CONTACT</a>
+</div>
+<div id="base1">
+  <marquee id="m1">...WELCOME TO DONOR LIST HOME PAGE...</marquee>
+</div>
+<div id="base2">
+  <div id="base2a">
+    <img src="{% static "images/2.jpeg" %}" id="img2"/>
+    <img src="{% static "images/3.jpeg" %}" id="img3" />
+  </div>
+  <div id="base2b">
+  <p id="p3">A blood donation occurs when a person voluntarily has blood drawn and used for transfusions and/or made into biopharmaceutical medications by a process called fractionation (separation of whole-blood components). Donation may be of whole blood, or of specific components directly (the latter called apheresis). Blood banks often participate in the collection process as well as the procedures that follow it.</p>
+  <p id="p3">Today in the developed world, most blood donors are unpaid volunteers who donate blood for a community supply. In some countries, established supplies are limited and donors usually give blood when family or friends need a transfusion (directed donation). Many donors donate as an act of charity, but in countries that allow paid donation some donors are paid, and in some cases there are incentives other than money such as paid time off from work. Donors can also have blood drawn for their own future use (autologous donation). Donating is relatively safe, but some donors have bruising where the needle is inserted or may feel faint.</p>
+  <button class="btn1"><b>ARE U READY TO DONATE..?</b></button>
+  </div>
+
+</div>
+</body>
+</html>
